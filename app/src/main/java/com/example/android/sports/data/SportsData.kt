@@ -21,6 +21,9 @@ import com.example.android.sports.model.Sport
 
 /**
  * Sports data
+ * This file contains a function called getSportsData()
+ * which returns an ArrayList pre-populated with hardcoded sports data.
+ * not recommended to hardcode the string data
  */
 object SportsData {
     fun getSportsData(): ArrayList<Sport> {

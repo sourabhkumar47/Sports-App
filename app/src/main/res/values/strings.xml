@@ -23,7 +23,7 @@
     <string name="title_placeholder">Title</string>
     <string name="news_title">News</string>
     <string name="sports_info_placeholder">Here is some news</string>
-    <string name="sports_news_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <string name="sports_news_detail_text" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse
         eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor
         diam fringilla tellus, eu euismod mauris neque at neque.</string>

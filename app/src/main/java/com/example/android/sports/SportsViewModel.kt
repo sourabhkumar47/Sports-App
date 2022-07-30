@@ -25,9 +25,11 @@ import com.example.android.sports.model.Sport
 class SportsViewModel : ViewModel() {
 
     private var _currentSport: MutableLiveData<Sport> = MutableLiveData<Sport>()
+    //stores the current sport selected by the user
     val currentSport: LiveData<Sport>
         get() = _currentSport
 
+    //contains list of sports data
     private var _sportsData: ArrayList<Sport> = ArrayList()
     val sportsData: ArrayList<Sport>
         get() = _sportsData

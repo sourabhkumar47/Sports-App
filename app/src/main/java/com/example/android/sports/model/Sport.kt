@@ -19,6 +19,8 @@ import com.example.android.sports.R
 
 /**
  * Data model for each row of the RecyclerView
+ * This is the data class to hold the data to be displayed in each row
+ * of recycler view
  */
 data class Sport(
     val id: Int,

@@ -34,6 +34,7 @@ class SportsListFragment : Fragment() {
     private val sportsViewModel: SportsViewModel by activityViewModels()
 
     override fun onCreateView(
+        //inflate the fragment_sports_news layout XML using binding view
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -41,6 +42,7 @@ class SportsListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //attach an observer to SportsViewModel property
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentSportsListBinding.bind(view)
 

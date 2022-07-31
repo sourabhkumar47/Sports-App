@@ -47,7 +47,12 @@ class SportsListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentSportsListBinding.bind(view)
 
-
+        val slidingPaneLayout = binding.slidingPaneLayout
+        // Connect the SlidingPaneLayout to the system back button.
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            SportsListOnBackPressedCallback(slidingPaneLayout)
+        )
 
         // Initialize the adapter and set it to the RecyclerView.
         val adapter = SportsAdapter {
@@ -67,25 +72,25 @@ class SportsListFragment : Fragment() {
 //custom back navigation
 class SportsListOnBackPressedCallback(
     private val slidingPaneLayout: SlidingPaneLayout
-) : OnBackPressedCallback(slidingPaneLayout.isSlideable && slidingPaneLayout.isOpen),
-    SlidingPaneLayout.PanelSlideListener {
+): OnBackPressedCallback(slidingPaneLayout.isSlideable && slidingPaneLayout.isOpen),
+    SlidingPaneLayout.PanelSlideListener{
 
     init {
         slidingPaneLayout.addPanelSlideListener(this)
     }
+
     override fun handleOnBackPressed() {
         slidingPaneLayout.closePane()
     }
 
     override fun onPanelSlide(panel: View, slideOffset: Float) {
-        TODO("Not yet implemented")
     }
 
     override fun onPanelOpened(panel: View) {
-        isEnabled(true)
+        isEnabled = true
     }
 
     override fun onPanelClosed(panel: View) {
-        isEnabled(true)
+        isEnabled = false
     }
 }
